@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الورديات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f9;
+        }
+        .top-bar {
+            background-color: #007bff;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar .left-buttons a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .new-shift-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .search-bar {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .action-buttons button {
+            background-color: #ffc107;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .pagination span {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+        <div class="left-buttons">
+            <a href="#">الذهاب إلى الموقع</a>
+            <a href="#">المساعدة</a>
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="container">
+        <button class="new-shift-btn" onclick="window.location.href='add_shift.html'">أضف وردية</button>
+
+        <!-- شريط البحث -->
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث بواسطة اسم الوردية">
+            <button>بحث</button>
+            <button onclick="window.location.href='manage_shifts.html'">إلغاء الفلتر</button>
+        </div>
+
+        <!-- جدول الورديات -->
+        <table>
+            <thead>
+                <tr>
+                    <th>الاسم</th>
+                    <th>أيام العطلات</th>
+                    <th>الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>الوردية الصباحية #2</td>
+                    <td>الجمعة، السبت</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button>تعديل</button>
+                            <button>نسخ</button>
+                            <button class="delete-btn">حذف</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>الرياض #1</td>
+                    <td>الجمعة</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button>تعديل</button>
+                            <button>نسخ</button>
+                            <button class="delete-btn">حذف</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- الترقيم -->
+        <div class="pagination">
+            <span>صفحة 1 من 2</span>
+        </div>
+    </div>
+
+</body>
+</html>

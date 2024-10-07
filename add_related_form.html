@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج مخصص</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f9;
+        }
+        .top-bar {
+            background-color: #007bff;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group label {
+            width: 20%;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .permissions {
+            margin-top: 40px;
+        }
+        .permissions h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .permission-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .permission-group label {
+            width: 20%;
+            font-weight: bold;
+        }
+        .permission-group select {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .save-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cancel-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+        <div>نموذج مخصص</div>
+        <div class="buttons">
+            <button class="save-btn">حفظ</button>
+            <button class="cancel-btn">إلغاء</button>
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="container">
+        <h2>معلومات نموذج مخصص</h2>
+        <!-- معلومات نموذج مخصص -->
+        <div class="form-group">
+            <label for="name">الاسم <span style="color:red;">*</span></label>
+            <input type="text" id="name" placeholder="أدخل اسم النموذج">
+        </div>
+        <div class="form-group">
+            <label for="status">الحالة <span style="color:red;">*</span></label>
+            <select id="status">
+                <option value="نشط">نشط</option>
+                <option value="غير نشط">غير نشط</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="identifier">المعرف <span style="color:red;">*</span></label>
+            <input type="text" id="identifier" placeholder="أدخل المعرف">
+        </div>
+        <div class="form-group">
+            <label for="description">الوصف</label>
+            <textarea id="description" rows="4" placeholder="أدخل وصف النموذج"></textarea>
+        </div>
+
+        <!-- قسم الصلاحيات -->
+        <div class="permissions">
+            <h3>الصلاحيات</h3>
+            <div class="permission-group">
+                <label for="add_record">أضف سجل <span style="color:red;">*</span></label>
+                <select id="add_record">
+                    <option value="الكل">الكل</option>
+                    <option value="محدد">محدد</option>
+                </select>
+            </div>
+            <div class="permission-group">
+                <label for="edit_record">تعديل السجل <span style="color:red;">*</span></label>
+                <select id="edit_record">
+                    <option value="الكل">الكل</option>
+                    <option value="محدد">محدد</option>
+                </select>
+            </div>
+            <div class="permission-group">
+                <label for="view_record">عرض السجل <span style="color:red;">*</span></label>
+                <select id="view_record">
+                    <option value="الكل">الكل</option>
+                    <option value="محدد">محدد</option>
+                </select>
+            </div>
+            <div class="permission-group">
+                <label for="delete_record">حذف السجل <span style="color:red;">*</span></label>
+                <select id="delete_record">
+                    <option value="الكل">الكل</option>
+                    <option value="محدد">محدد</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

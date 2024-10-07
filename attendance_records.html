@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجلات الحضور</title>
+    <link rel="stylesheet" href="styles.css"> <!-- أضف ملف CSS الخاص بك هنا إذا لزم الأمر -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f2f2f2;
+        }
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .empty-record {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-top: 50px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+            <button onclick="window.location.href='#'">الذهاب إلى الموقع</button>
+            <button onclick="window.location.href='#'">المساعدة</button>
+        </div>
+        <span>سجلات الحضور</span>
+    </div>
+
+    <div class="container">
+        <div class="dropdown">
+            <button onclick="document.getElementById('file-input').click();">استيراد ملف &#43;</button>
+            <input type="file" id="file-input" class="file-input" onchange="importFile(event)">
+        </div>
+
+        <div class="empty-record">
+            لا يوجد سجلات الحضور أضيفت حتى الآن
+        </div>
+    </div>
+
+    <script>
+        function importFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                alert("تم استيراد الملف: " + file.name);
+                // هنا يمكنك إضافة وظائف إضافية لمعالجة الملف
+            }
+        }
+    </script>
+
+</body>
+</html>

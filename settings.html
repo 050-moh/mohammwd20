@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات العميل</title>
+    <link rel="icon" href="k.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f6f9;
+            direction: rtl;
+            display: flex;
+            gap: 20px;
+        }
+
+        .settings-section {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            color: #007bff;
+        }
+
+        .settings-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .settings-section select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .fields-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .field-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .field-option input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="settings-section">
+        <h2>إعدادات العميل</h2>
+        <label for="client-type">نوع العميل</label>
+        <select id="client-type">
+            <option value="both">كلاهما</option>
+            <option value="individual">فردي فقط</option>
+            <option value="business">تجاري فقط</option>
+        </select>
+    </div>
+
+    <div class="settings-section">
+        <h2>الحقول الإضافية للعميل</h2>
+        <div class="fields-section">
+            <div class="field-option">
+                <input type="checkbox" id="photo">
+                <label for="photo">صورة</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="type">
+                <label for="type">النوع</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="birthdate">
+                <label for="birthdate">تاريخ الميلاد</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="location">
+                <label for="location">الموقع على الخريطة</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="opening-balance">
+                <label for="opening-balance">الرصيد الافتتاحي</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="credit-limit">
+                <label for="credit-limit">الحد الائتماني</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="credit-period">
+                <label for="credit-period">المدة الائتمانية</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="id-number">
+                <label for="id-number">رقم الهوية</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="multiple-addresses">
+                <label for="multiple-addresses">عناوين متعددة</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="barcode">
+                <label for="barcode">باركود</label>
+            </div>
+            <div class="field-option">
+                <input type="checkbox" id="link">
+                <label for="link">الرابط</label>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

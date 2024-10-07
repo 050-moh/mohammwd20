@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرق الدفع</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar button {
+            background-color: white;
+            color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-bar button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .save-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .save-btn:hover {
+            background-color: #218838;
+        }
+
+        .add-btn:hover {
+            background-color: #138496;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .payment-method {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .payment-method img {
+            width: 60px;
+            height: auto;
+        }
+
+        .payment-method span {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .toggle-switch {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-switch label {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-switch label:after {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label {
+            background-color: #28a745;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label:after {
+            transform: translateX(20px);
+        }
+
+        .payment-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط الأدوات العلوي -->
+    <div class="top-bar">
+        <span>طرق الدفع</span>
+        <div>
+            <button class="save-btn">حفظ</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- زر إضافة وسيلة دفع مخصصة -->
+        <button class="add-btn" onclick="window.location.href='add_custom_payment.html';">إضافة وسيلة دفع مخصصة</button>
+
+        <!-- قائمة طرق الدفع -->
+        <div class="payment-methods">
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/410/410126.png" alt="تحويل بنكي">
+                <span>تحويل بنكي</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="bank-transfer">
+                    <label for="bank-transfer"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/1792/1792912.png" alt="نقدي">
+                <span>نقدي</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="cash">
+                    <label for="cash"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" alt="PayPal">
+                <span>PayPal</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="paypal">
+                    <label for="paypal"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/2632/2632151.png" alt="شيك">
+                <span>شيك</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="cheque">
+                    <label for="cheque"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="بطاقة ائتمان">
+                <span>بطاقة ائتمان</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="credit-card">
+                    <label for="credit-card"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/2767/2767074.png" alt="PayFort">
+                <span>PayFort</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="payfort">
+                    <label for="payfort"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/1364/1364994.png" alt="PayTabs">
+                <span>PayTabs</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="paytabs">
+                    <label for="paytabs"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/8232/8232161.png" alt="Stripe">
+                <span>Stripe</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="stripe">
+                    <label for="stripe"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/2750/2750657.png" alt="Tap">
+                <span>Tap</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="tap">
+                    <label for="tap"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/7430/7430943.png" alt="Tamara Pay">
+                <span>Tamara Pay</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="tamara-pay">
+                    <label for="tamara-pay"></label>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <img src="https://cdn-icons-png.flaticon.com/512/8254/8254984.png" alt="Tabby">
+                <span>Tabby</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="tabby">
+                    <label for="tabby"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

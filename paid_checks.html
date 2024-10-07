@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشيكات المدفوعة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .content {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+        .btn-blue {
+            background-color: #007bff;
+        }
+        .btn-green {
+            background-color: #28a745;
+        }
+        .empty-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="header">
+            <button class="btn btn-blue" onclick="window.location.href='check_register.html'">ادارة دفاتر الشيكات</button>
+            <button class="btn btn-green" onclick="window.location.href='issue_check.html'">إصدار شيك</button>
+        </div>
+
+        <div class="empty-message">
+            لا يوجد الشيكات المدفوعة أضيفت حتى الآن
+        </div>
+    </div>
+
+</body>
+</html>

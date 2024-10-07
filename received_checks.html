@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشيكات المستلمة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .content {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            background-color: #28a745;
+        }
+        .empty-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="header">
+            <button class="btn" onclick="window.location.href='receive_check.html'">استلم شيك</button>
+        </div>
+
+        <div class="empty-message">
+            لا يوجد الشيكات المستلمة أضيفت حتى الآن
+        </div>
+    </div>
+
+</body>
+</html>
