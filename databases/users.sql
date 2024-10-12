@@ -1,3 +1,4 @@
+USE database_name;
 CREATE TABLE users (
   id INT(11) NOT NULL AUTO_INCREMENT,
   username VARCHAR(100) NOT NULL,

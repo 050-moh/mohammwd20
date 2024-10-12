@@ -1,5 +1,5 @@
 CREATE TABLE user_permissions (
-    user_id INT PRIMARY KEY,            -- معرف المستخدم
+    user_id INT AUTO_INCREMENT PRIMARY KEY,            -- معرف المستخدم
     user_name VARCHAR(255) NOT NULL,    -- اسم المستخدم
     status ENUM('نشط', 'غير نشط') NOT NULL, -- حالة المستخدم (نشط أو غير نشط)
     allow_approve_reject TINYINT(1) DEFAULT 0,  -- السماح بالموافقة أو رفض الطلبات (0 = لا، 1 = نعم)
